@@ -17,24 +17,18 @@ Computer vision foundation models, such as DINO or OpenCLIP, are trained in a se
 </p>
 
 ## Usage
-<details open>
-<summary>Environment Setup</summary>
-
+### Conda Environment Setup
 ```bash
 conda create -n lvm_hvs python=3.12
 conda activate lvm_hvs
 conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1  pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install tqdm opencv-python matplotlib scikit-learn scipy transformers diffusers accelerate
 ```
-
-</details>
-
-<details open>
-<summary>Model Setup</summary>
+### Models Setup
 ```bash
-conda create -n lvm_hvs python=3.12
-conda activate lvm_hvs
-conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1  pytorch-cuda=11.8 -c pytorch -c nvidia
-pip install tqdm opencv-python matplotlib scikit-learn scipy transformers diffusers accelerate
+git clone https://github.com/caiyancheng/VFM_HVS_CVPR2025.git
+cd VFM_HVS_CVPR2025
+pip install git+https://github.com/facebookresearch/segment-anything.git
+## Please download all the model checkpoints from the SAM official website, and put in the SAM_repo
+## The SAM-2 repo is always updating, so we don't provide the code for running the SAM-2 test
 ```
-</details>
