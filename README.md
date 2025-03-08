@@ -17,3 +17,14 @@ Computer vision foundation models, such as DINO or OpenCLIP, are trained in a se
 </p>
 
 ## Usage
+<details open>
+<summary>Environment Setup</summary>
+
+```bash
+conda create -n lvm_hvs python=3.12
+conda activate lvm_hvs
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1  pytorch-cuda=11.8 -c pytorch -c nvidia
+pip install tqdm opencv-python matplotlib scikit-learn scipy transformers diffusers accelerate
+```
+
+</details>
