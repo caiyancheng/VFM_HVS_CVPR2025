@@ -13,5 +13,7 @@ Computer vision foundation models, such as DINO or OpenCLIP, are trained in a se
 
 &ensp;
 <p align="center">
-  <img src="images/first_figure_8.png" height="420">
+  <img src="images/first_figure_8.png" width="80%">
 </p>
+
+## Usage
