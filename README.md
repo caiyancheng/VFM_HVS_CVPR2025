@@ -28,7 +28,22 @@ pip install tqdm opencv-python matplotlib scikit-learn scipy transformers diffus
 ```bash
 git clone https://github.com/caiyancheng/VFM_HVS_CVPR2025.git
 cd VFM_HVS_CVPR2025
+```
+Install SAM
+```bash
 pip install git+https://github.com/facebookresearch/segment-anything.git
 ## Please download all the model checkpoints from the SAM official website, and put in the SAM_repo
 ## The SAM-2 repo is always updating, so we don't provide the code for running the SAM-2 test
+```
+Install ColorVideoVDP
+```bash
+pip install pynvml
+conda install ffmpeg conda-forge::freeimage
+git clone git@github.com:gfxdisp/ColorVideoVDP.git % Please skip the tests of ColorVideoVDP if you cannot download it.
+cd ColorVideoVDP
+pip install -e .
+```
+Install OpenCLIP
+```bash
+pip install open_clip_torch
 ```
