@@ -16,7 +16,7 @@ Computer vision foundation models, such as DINO or OpenCLIP, are trained in a se
   <img src="images/first_figure_8.png" width="60%">
 </p>
 
-## Usage
+## Setup
 ### Conda Environment Setup
 ```bash
 conda create -n lvm_hvs python=3.12
@@ -46,4 +46,26 @@ pip install -e .
 Install OpenCLIP
 ```bash
 pip install open_clip_torch
+```
+## Usage
+It is recommended to run the code using a compiler, such as PyCharm.
+### Generate test stimulus (Optional)
+```bash
+Band_limit_noise_generator/generate_plot_band_lim_noise.py
+Contrast_masking_generator/generate_plot_contrast_masking.py
+Contrast_masking_generator/generate_plot_contrast_masking_gabor_on_noise.py
+Gabor_test_stimulus_generator/generate_plot_gabor_functions_new.py
+Sinusoidal_grating_generator/generate_plot_sinusoidal_grating.py
+```
+### Test
+```bash
+test_main.py
+```
+### Plot figures
+```bash
+plot_main.py
+```
+### Compute model alignment scores
+```bash
+compute_error_main.py
 ```
