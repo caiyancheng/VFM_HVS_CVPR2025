@@ -1,0 +1,324 @@
+<html>
+<head>
+<meta charset="UTF-8"> <!-- Specifies UTF-8 encoding -->
+
+<link rel="stylesheet" type="text/css" href="css_files/style.css">
+
+<script src='js_files/plotly-2.35.2.min.js'></script>
+</head>
+<body>
+<div class="sidebar">
+
+
+
+    <h2>MENU</h2>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('menu1')">Contrast Detection</div>
+
+
+
+    <div id="menu1" class="sub-menu">
+
+
+
+        <a href="contrast_detection_spatial_frequency_achromatic_gabor.html"><div class="sub-menu-item">Spatial Frequency - Achromatic Gabor</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_achromatic_noise.html"><div class="sub-menu-item">Spatial Frequency - Achromatic Noise</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_red_green_gabor.html"><div class="sub-menu-item">Spatial Frequency - Red-Green Gabor</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_yellow_violet_gabor.html"><div class="sub-menu-item">Spatial Frequency - Yellow-Violet Gabor</div></a>
+
+
+
+        <a href="contrast_detection_luminance.html"><div class="sub-menu-item">Luminance</div></a>
+
+
+
+        <a href="contrast_detection_area.html"><div class="sub-menu-item">Area</div></a>
+
+
+
+    </div>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('menu2')">Contrast Masking</div>
+
+
+
+    <div id="menu2" class="sub-menu">
+
+
+
+        <a href="contrast_masking_phase_coherent_masking.html"><div class="sub-menu-item">Phase Coherent Masking</div></a>
+
+
+
+        <a href="contrast_masking_phase_incoherent_masking.html"><div class="sub-menu-item">Phase Incoherent Masking</div></a>
+
+
+
+    </div>
+
+
+
+    <a href="contrast_constancy_contrast_matching.html"><div class="menu-item" onclick="toggleMenu('menu3')">Contrast Constancy - Contrast Matching</div></a>
+
+
+
+</div>
+<div class=other_content>
+<h2>Contrast Detection - Luminance</h2>
+<p> The plots are generated with Plotly JS, please wait for few seconds for all the plots to be generated. </p>
+<p> The countour plots are dynamic, you can hover over them and read the results, or zoom in and zoom out. </p>
+<p> Each contour plot corresponds to the results of a model for the "Contrast Detection - Luminance" test in terms of the latent space dissimilarity S<sub>ac</sub>, while the red line corresponds to the ground truth. The test stimuli examples can be found <a href=previews\Gabor_Luminance_Contrast_supplementary.png>here</a>. </p>
+<div class=image-container>
+<div id=contrast_detection_-_luminance_no_encoder>
+</div>
+<div id=contrast_detection_-_luminance_colorvideovdp>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_resnet50>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_vits16>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_vits8>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_vitb16>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_vitb8>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_xcit_small_12_p16>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_xcit_small_12_p8>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_xcit_medium_24_p16>
+</div>
+<div id=contrast_detection_-_luminance_dino_dino_xcit_medium_24_p8>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vits14>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitb14>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitl14>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitg14>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vits14_reg>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitb14_reg>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitl14_reg>
+</div>
+<div id=contrast_detection_-_luminance_dinov2_dinov2_vitg14_reg>
+</div>
+<div id=contrast_detection_-_luminance_openclip_rn50_openai>
+</div>
+<div id=contrast_detection_-_luminance_openclip_rn50_yfcc15m>
+</div>
+<div id=contrast_detection_-_luminance_openclip_rn101_openai>
+</div>
+<div id=contrast_detection_-_luminance_openclip_rn101_yfcc15m>
+</div>
+<div id=contrast_detection_-_luminance_openclip_convnext_base_w_laion2b_s13b_b82k>
+</div>
+<div id=contrast_detection_-_luminance_openclip_convnext_base_w_laion2b_s13b_b82k_augreg>
+</div>
+<div id=contrast_detection_-_luminance_openclip_convnext_large_d_laion2b_s26b_b102k_augreg>
+</div>
+<div id=contrast_detection_-_luminance_openclip_convnext_xxlarge_laion2b_s34b_b82k_augreg>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_b_32_openai>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_b_32_laion2b_s34b_b79k>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_b_16_openai>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_b_16_laion2b_s34b_b88k>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_l_14_openai>
+</div>
+<div id=contrast_detection_-_luminance_openclip_vit_l_14_laion2b_s32b_b82k>
+</div>
+<div id=contrast_detection_-_luminance_sam_sam_vit_b_01ec64>
+</div>
+<div id=contrast_detection_-_luminance_sam_sam_vit_l_0b3195>
+</div>
+<div id=contrast_detection_-_luminance_sam_sam_vit_h_4b8939>
+</div>
+<div id=contrast_detection_-_luminance_sam-2_sam2.1_hiera_tiny>
+</div>
+<div id=contrast_detection_-_luminance_sam-2_sam2.1_hiera_small>
+</div>
+<div id=contrast_detection_-_luminance_sam-2_sam2.1_hiera_base_plus>
+</div>
+<div id=contrast_detection_-_luminance_sam-2_sam2.1_hiera_large>
+</div>
+<div id=contrast_detection_-_luminance_mae_vit_mae_base>
+</div>
+<div id=contrast_detection_-_luminance_mae_vit_mae_large>
+</div>
+<div id=contrast_detection_-_luminance_mae_vit_mae_huge>
+</div>
+<div id=contrast_detection_-_luminance_sd-vae_stable_diffusion_v1_5>
+</div>
+<div id=contrast_detection_-_luminance_sd-vae_stable_diffusion_xl_base_1.0>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js_files/script_contrast_detection_luminance.js"></script>
+
+
+<script type="text/javascript">
+
+
+
+    // Select all images with the 'toggle-image' class
+
+    const images = document.querySelectorAll('.toggle-image');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    images.forEach((image) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = image.dataset.original;
+
+        const alternateSrc = image.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        image.addEventListener('mousedown', () => {
+
+            image.src = alternateSrc;
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        image.addEventListener('mouseup', () => {
+
+            image.src = originalSrc;
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        image.addEventListener('mouseleave', () => {
+
+            image.src = originalSrc;
+
+        });
+
+    });
+
+
+
+    // Select all video with the 'toggle-video' class
+
+    const videos = document.querySelectorAll('.toggle-video');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    videos.forEach((video) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = video.dataset.original;
+
+        const alternateSrc = video.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        video.addEventListener('mousedown', () => {
+
+            video.src = alternateSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        video.addEventListener('mouseup', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        video.addEventListener('mouseleave', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+    });
+
+
+
+    function toggleMenu(menuId) {
+
+            var menu = document.getElementById(menuId);
+
+            if (menu.style.display === "block") {
+
+                menu.style.display = "none";
+
+            } else {
+
+                menu.style.display = "block";
+
+            }
+
+        }
+
+
+
+</script>
+
+    
+</body>
+</html>

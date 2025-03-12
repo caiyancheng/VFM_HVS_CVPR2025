@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta charset="UTF-8"> <!-- Specifies UTF-8 encoding -->
+
+<link rel="stylesheet" type="text/css" href="css_files/style.css">
+
+<script src='js_files/plotly-2.35.2.min.js'></script>
+</head>
+<body>
+<div class="sidebar">
+
+
+
+    <h2>MENU</h2>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('menu1')">Contrast Detection</div>
+
+
+
+    <div id="menu1" class="sub-menu">
+
+
+
+        <a href="contrast_detection_spatial_frequency_achromatic_gabor.html"><div class="sub-menu-item">Spatial Frequency - Achromatic Gabor</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_achromatic_noise.html"><div class="sub-menu-item">Spatial Frequency - Achromatic Noise</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_red_green_gabor.html"><div class="sub-menu-item">Spatial Frequency - Red-Green Gabor</div></a>
+
+
+
+        <a href="contrast_detection_spatial_frequency_yellow_violet_gabor.html"><div class="sub-menu-item">Spatial Frequency - Yellow-Violet Gabor</div></a>
+
+
+
+        <a href="contrast_detection_luminance.html"><div class="sub-menu-item">Luminance</div></a>
+
+
+
+        <a href="contrast_detection_area.html"><div class="sub-menu-item">Area</div></a>
+
+
+
+    </div>
+
+
+
+    <div class="menu-item" onclick="toggleMenu('menu2')">Contrast Masking</div>
+
+
+
+    <div id="menu2" class="sub-menu">
+
+
+
+        <a href="contrast_masking_phase_coherent_masking.html"><div class="sub-menu-item">Phase Coherent Masking</div></a>
+
+
+
+        <a href="contrast_masking_phase_incoherent_masking.html"><div class="sub-menu-item">Phase Incoherent Masking</div></a>
+
+
+
+    </div>
+
+
+
+    <a href="contrast_constancy_contrast_matching.html"><div class="menu-item" onclick="toggleMenu('menu3')">Contrast Constancy - Contrast Matching</div></a>
+
+
+
+</div>
+<div class=other_content>
+<p> Please select one of the tests in the sidebar to view the models performance in the test. </p>
+</div>
+
+
+<script type="text/javascript">
+
+
+
+    // Select all images with the 'toggle-image' class
+
+    const images = document.querySelectorAll('.toggle-image');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    images.forEach((image) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = image.dataset.original;
+
+        const alternateSrc = image.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        image.addEventListener('mousedown', () => {
+
+            image.src = alternateSrc;
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        image.addEventListener('mouseup', () => {
+
+            image.src = originalSrc;
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        image.addEventListener('mouseleave', () => {
+
+            image.src = originalSrc;
+
+        });
+
+    });
+
+
+
+    // Select all video with the 'toggle-video' class
+
+    const videos = document.querySelectorAll('.toggle-video');
+
+
+
+    // Add event listeners to each image for mouse down and mouse up events
+
+    videos.forEach((video) => {
+
+        // Store the original and alternate image URLs from the dataset attributes
+
+        const originalSrc = video.dataset.original;
+
+        const alternateSrc = video.dataset.alternate;
+
+
+
+        // When the user clicks (mouse down), change the image to the alternate
+
+        video.addEventListener('mousedown', () => {
+
+            video.src = alternateSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // When the user releases the click (mouse up), revert back to the original image
+
+        video.addEventListener('mouseup', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+
+
+        // Also revert to the original image if the user moves the mouse out of the image while holding the click
+
+        video.addEventListener('mouseleave', () => {
+
+            video.src = originalSrc;
+
+            video.loop = true;
+
+            video.load();
+
+            video.play();
+
+        });
+
+    });
+
+
+
+    function toggleMenu(menuId) {
+
+            var menu = document.getElementById(menuId);
+
+            if (menu.style.display === "block") {
+
+                menu.style.display = "none";
+
+            } else {
+
+                menu.style.display = "block";
+
+            }
+
+        }
+
+
+
+</script>
+
+    
+</body>
+</html>
